@@ -27,7 +27,7 @@ services:
 
   spid-testenv2:
     container_name: spid-testenv2
-    image: italia/spid-testenv2
+    image: italia/spid-testenv2@sha256:196c9121f6e50d197e251704518ec487c24579f2e3e9c88e7094d9c2ea7c4ded
     ports:
       - "8088:8088"
     volumes:
@@ -42,7 +42,7 @@ services:
   #
   #
   redis-node-0:
-    image: docker.io/bitnami/redis-cluster:6.2
+    image: docker.io/bitnami/redis-cluster:6.2@sha256:af9fccd81461a1a1f9b316dd3514c449d3e04ceb67be2c4d88e74682d08bf61f
     networks:
       - io-be
     ports:
@@ -54,7 +54,7 @@ services:
       - 'REDIS_NODES=redis-cluster redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5 redis-node-6'
 
   redis-node-1:
-    image: docker.io/bitnami/redis-cluster:6.2
+    image: docker.io/bitnami/redis-cluster:6.2@sha256:af9fccd81461a1a1f9b316dd3514c449d3e04ceb67be2c4d88e74682d08bf61f
     networks:
       - io-be
     ports:
@@ -66,7 +66,7 @@ services:
       - 'REDIS_NODES=redis-cluster redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5 redis-node-6'
 
   redis-node-2:
-    image: docker.io/bitnami/redis-cluster:6.2
+    image: docker.io/bitnami/redis-cluster:6.2@sha256:af9fccd81461a1a1f9b316dd3514c449d3e04ceb67be2c4d88e74682d08bf61f
     networks:
       - io-be
     ports:
@@ -78,7 +78,7 @@ services:
       - 'REDIS_NODES=redis-cluster redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5 redis-node-6'
 
   redis-node-3:
-    image: docker.io/bitnami/redis-cluster:6.2
+    image: docker.io/bitnami/redis-cluster:6.2@sha256:af9fccd81461a1a1f9b316dd3514c449d3e04ceb67be2c4d88e74682d08bf61f
     networks:
       - io-be
     ports:
@@ -90,7 +90,7 @@ services:
       - 'REDIS_NODES=redis-cluster redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5 redis-node-6'
 
   redis-node-4:
-    image: docker.io/bitnami/redis-cluster:6.2
+    image: docker.io/bitnami/redis-cluster:6.2@sha256:af9fccd81461a1a1f9b316dd3514c449d3e04ceb67be2c4d88e74682d08bf61f
     networks:
       - io-be
     ports:
@@ -102,7 +102,7 @@ services:
       - 'REDIS_NODES=redis-cluster redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5 redis-node-6'
 
   redis-node-5:
-    image: docker.io/bitnami/redis-cluster:6.2
+    image: docker.io/bitnami/redis-cluster:6.2@sha256:af9fccd81461a1a1f9b316dd3514c449d3e04ceb67be2c4d88e74682d08bf61f
     networks:
       - io-be
     ports:
@@ -114,7 +114,7 @@ services:
       - 'REDIS_NODES=redis-cluster redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5 redis-node-6'
 
   redis-node-6:
-    image: docker.io/bitnami/redis-cluster:6.2
+    image: docker.io/bitnami/redis-cluster:6.2@sha256:af9fccd81461a1a1f9b316dd3514c449d3e04ceb67be2c4d88e74682d08bf61f
     networks:
       - io-be
     ports:
@@ -126,7 +126,7 @@ services:
       - 'REDIS_NODES=redis-cluster redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5 redis-node-6'
 
   redis-cluster:
-    image: docker.io/bitnami/redis-cluster:6.2
+    image: docker.io/bitnami/redis-cluster:6.2@sha256:af9fccd81461a1a1f9b316dd3514c449d3e04ceb67be2c4d88e74682d08bf61f
     networks:
       - io-be
     ports:
@@ -149,7 +149,7 @@ services:
       - 'REDIS_CLUSTER_CREATOR=yes'
 
   storage:
-    image: mcr.microsoft.com/azure-storage/azurite
+    image: mcr.microsoft.com/azure-storage/azurite@sha256:47a392f1c93a6b639999fc505dcae348e350183b47f2a7526c765ddd7fa56e0e
     container_name: storage
     hostname: azurite
     restart: always
