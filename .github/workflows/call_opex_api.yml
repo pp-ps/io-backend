@@ -26,7 +26,7 @@ jobs:
 
       - name: Checkout
         id: checkout
-        uses: actions/checkout@1f9a0c22da41e6ebfa534300ef656657ea2c6707
+        uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
         with:
           persist-credentials: false
           fetch-depth: 0
